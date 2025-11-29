@@ -1,0 +1,117 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #741801c2, #8b2b13c2);
+  color: white;
+  padding: 50px 20px;
+  border-radius: 15px 15px 0 0;
+  box-sizing: border-box;
+}
+.footer-bottom{
+  list-style: none;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  padding: 10px;
+}
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #ddd; /* halka grey hover effect */
+}
+.footer-section h2 {
+  color: #f5fafc;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-section ul li:hover {
+  color: #ffd1d1;
+  transform: translateX(5px);
+}
+
+.footer-section p {
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: #66150ac2;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffd1d1;
+  transform: scale(1.2);
+}
+
+.copyright {
+  text-align: center;
+  width: 100%;
+  color: #f2f2f2;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Scroll-to-Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+background: linear-gradient(135deg, #9e2a12, #c03d1a);
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.scroll-top:hover {
+  background: linear-gradient(135deg, #9e2a12, #c03d1a);
+  box-shadow: 0 0 20px rgba(255, 160, 140, 0.8);
+  transform: translateY(-5px);
+}

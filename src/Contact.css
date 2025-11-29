@@ -1,0 +1,271 @@
+
+
+
+/* ================= HEADER SECTION ================= */
+
+.contact {
+  text-align: center;
+  color: #721b1b;
+  padding: 120px 0 60px 0;
+}
+
+.contact h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  margin-bottom: 10px;
+  animation: fadeInDown 1.5s ease;
+}
+
+.contact h3 {
+  font-size: 1.4rem;
+  opacity: 0.9;
+  animation: fadeInUp 1.8s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ================= CONTACT FORM SECTION ================= */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: linear-gradient(135deg, rgba(0, 60, 130, 0.7), rgba(0, 25, 90, 0.6)); /* blueish tone */
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 50px;
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+
+.left-side {
+  flex: 1;
+  min-width: 300px;
+  animation: fadeInLeft 1.2s ease;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.left-side h2 {
+  font-size: 2rem;
+  color: #060111;
+  
+  text-shadow: #721b1b;
+}
+
+.left-side p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.left-side a {
+  color: #721b1b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.left-side a:hover {
+  color: #4e3496;
+}
+
+/* ================= FORM INPUT STYLES ================= */
+
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInRight 1.2s ease;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.input-group {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 20px;
+
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(175, 29, 29, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 14px;
+  color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background:rgb(116, 118, 216);
+  border-color: #580606;
+  transform: scale(1.02);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #5a050c;
+}
+
+.contact-form button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #ff4c4c, #ff7777);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ff7777, #ff4c4c);
+}
+
+/* Grouped input layout */
+.input-group {
+  display: flex;
+  flex-direction: column; /* stack inputs vertically */
+  gap: 15px;              /* space between inputs inside this group */
+  margin-bottom: 15px;    /* space below the group */
+}
+
+/* Individual inputs & textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 15px; /* 🔥 adds gap between phone & textarea */
+}
+
+/* When user focuses on input or textarea */
+input:focus,
+textarea:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 8px rgba(0, 102, 255, 0.3);
+}
+
+/* Optional: make the whole section centered */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ✅ Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  animation: slideIn 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.font{
+  font-weight: bold;
+  
+}
+.social-icons{
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.let {
+  padding-top: 100px;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem; /* tu chaahe to 1.8rem kar sakta hai */
+  text-align: center; /* optional: center align for balance */
+}
+
+/* Paragraph style below heading */
+.let + p {
+  color: white; /* 🔹 white text */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); /* 🔹 shadow behind white text */
+  max-width: 600px;
+  margin: 15px auto 0 auto; /* center paragraph under heading */
+}

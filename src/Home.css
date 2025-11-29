@@ -1,0 +1,594 @@
+ body {
+  background: linear-gradient(135deg, hsl(0, 0%, 93%), #fffefe);
+  background-attachment: fixed; /* makes gradient stay still when scrolling */
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+ 
+ .tola {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 8rem;
+}
+
+.welcome {
+  font-size: 50px;
+  padding-left: 10rem;
+  padding-bottom: 4.5rem;
+  color: #741801c2;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 20px;
+  padding-left: 10rem;
+}
+
+
+.march {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 50px; 
+}
+
+.febr {
+  flex: 1;
+  text-align: center;
+  padding-right: 4rem;
+  padding-top: 3rem;
+}
+
+.febr img {
+  max-width: 100%;
+  height:100%;
+  border-radius:10px;
+  
+}
+
+
+/* ========= Box Section ========== */
+.arrange {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 30px;
+  padding: 20px;
+  gap: 30px; 
+  flex-wrap: wrap;
+}
+
+.arrange .col-3 {
+  flex: 1;
+  padding: 40px 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ede9fe;
+  background-color:#2c2380c2;
+  border-radius: 20px;                /* rounded corners */
+  border-bottom: 4px solid transparent;
+  box-shadow: 0 6px 15px rgb(97, 93, 93);
+  min-width: 250px;
+
+  /* text ko vertically aur horizontally center karna */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.arrange .col-3:hover {
+  background-color:#741801c2;
+  color:white;
+  border-bottom: 4px solid rgb(134, 19, 19);
+  transform: translateY(-10px);      /* hover par upar lift effect */
+  box-shadow: 0 10px 25px rgba(216, 65, 98, 0.2);
+}
+
+.arrange .col-3:active {
+  transform: translateY(-5px) scale(0.98);  /* click par halka press feel */
+}
+
+.arrange .col-3.active {
+  background-color:#2c2380c2;
+  color: white;
+  text-align: start;
+  border-bottom: 4px solid rgb(172, 10, 10);
+  transform: translateY(-8px);       /* active wale box ko bhi slightly lift */
+  box-shadow: 0 8px 20px rgba(216, 65, 98, 0.2);
+}
+
+.arrange .col-3 h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.arrange .col-3 p {
+  font-size: 15px;
+  color: inherit;
+  margin: 0;
+  line-height: 1.5;
+  text-align: start;
+  max-width: 280px;
+}
+
+/* slight animation feel */
+.arrange .col-3 {
+  transition: transform 0.3s ease, b
+}
+.about{
+  align-items: center;
+  text-align: center;
+
+}
+.about-container{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.padd{
+ 
+  text-align:start;
+ padding-bottom: 10px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 120px;
+  background: #fff;
+  gap: 60px;
+}
+
+/* Left side image with circle bg */
+.about-left {
+  position: relative;
+  width: 50%;
+}
+
+.circle-bg {
+  background: radial-gradient(circle at center, #a78bfa 0%, #741801c2 80%);
+  border-radius: 50%;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.about-photo {
+  width: 80%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Floating badges */
+.badge {
+  position: absolute;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px 15px;
+  text-align: center;
+  width: 120px;
+}
+
+.badge h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.badge p {
+  font-size: 13px;
+  color: #777;
+}
+
+.top-left {
+  top: 15%;
+  left: 0;
+}
+
+.bottom-left {
+  bottom: 10%;
+  left: 5%;
+}
+
+/* Right side text */
+.about-right {
+  width: 50%;
+  
+}
+
+
+
+
+.about-right h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #110603c2;
+  
+}
+
+.about-desc {
+  color: #300c04c2;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Feature cards */
+.about-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #702d2d;
+  color: white;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.about-feature.active {
+  background: #a37569c2;
+}
+
+.icon {
+  color: #6366f1;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.about-feature:hover {
+  transform: translateY(-5px);
+}
+
+
+.tag-btn {
+  background: #2562f0;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.transparent-box{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #8fcee2;
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+  backdrop-filter: blur(10px);           /* background blur effect */
+  -webkit-backdrop-filter: blur(10px);   /* Safari support */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+}
+
+.container {
+  position: relative;
+  width: 150%;
+  height: 110px;
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 100%; /* start boxes offscreen right */
+}
+
+.box-container {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  padding: 40px 0;
+  position: relative;
+}
+
+/* 🔹 Smooth left to right scroll covering full page */
+.box-row {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: slideFull 14s linear infinite;
+}
+
+/* 🔹 Slight delay for 2nd row (more natural effect) */
+.box-row.delay {
+  animation-delay: 3s;
+}
+
+/* 🔹 Logo style */
+.box-row img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.box-row img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* 🔹 Animation from full left to full right */
+@keyframes slideFull {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 🔹 Pause on hover */
+.box-container:hover .box-row {
+  animation-play-state: paused;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 1024px) {
+  .box-row {
+    gap: 60px;
+  }
+  .box-row img {
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-row {
+    gap: 40px;
+  }
+  .box-row img {
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .box-row {
+    gap: 25px;
+  }
+  .box-row img {
+    height: 45px;
+  }
+}
+
+
+/* 
+Services sectiov */
+
+.next {
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.gen {
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.imgset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px 100px;
+  margin: 70px auto;
+  max-width: 1300px;
+}
+
+.imgBox {
+  position: relative;
+  width: 310px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 4px solid #5f0909;
+  transition: all 0.4s ease;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imgBox:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay effect */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(90, 31, 184, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.imgBox:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* project section */
+
+.portfolio-section {
+  text-align: center;
+  color: rgb(247, 242, 242);
+  padding: 4rem 2rem;
+  background: transparent; /* use your existing background shader */
+}
+.our{
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.ourr{
+    color: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.portfolio-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.portfolio-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  
+  line-height: 1.6;
+  color: #fff9f9;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  background:rgb(105, 23, 23);
+  border-radius: 1rem;
+  padding: 3rem;
+ text-align: start;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-8px);
+  background:rgb(96, 96, 201);
+}
+
+
+.imgset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px 100px;
+  margin: 70px auto;
+  max-width: 1300px;
+  padding: 20px;
+}
+
+.imgBox {
+  position: relative;
+  width: 310px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 4px solid #5f0909;
+  transition: all 0.4s ease;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imgBox:hover img {
+  transform: scale(1.1);
+}
+  /* link */
+  .Button{
+    justify-items: center;
+    gap: 4;
+  }
+  /* Portfolio Box Styling */
+.portfolio-box {
+  background-color: #a33b3b; /* Reddish background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); /* Red shadow glow */
+  width: 60%;
+  margin: 50px auto;
+  transition: all 0.3s ease;
+}
+
+/* Optional hover effect on whole box */
+.portfolio-box:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 255, 0.5), 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+/* Center the button */
+.btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Button styling */
+.btn button {
+  background-color: #640909; /* Dark red */
+  color: white;
+  border: 10px;
+  border-radius: 10px; /* Square shape (small radius) */
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn button:hover {
+  background-color: #193a7c; /* Blue when hover */
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.6), 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
