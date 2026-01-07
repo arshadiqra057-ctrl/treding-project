@@ -32,6 +32,9 @@ function Nav() {
                         <li><Link to="/about" className="nav-link">About</Link></li>
                         <li><Link to="/compliance" className="nav-link">Compliance</Link></li>
                         <li><Link to="/support" className="nav-link">Support</Link></li>
+                        {localStorage.getItem('isAdmin') === 'true' && (
+                            <li><Link to="/admin" className="nav-link admin-link" style={{ color: '#4A9FD4' }}>Admin</Link></li>
+                        )}
                     </ul>
 
                     {/* Auth Buttons */}
