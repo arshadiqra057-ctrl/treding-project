@@ -16,30 +16,26 @@ export const stockTickerData = [
 
 export const etfCategories = [
     {
-        title: 'Energy ( Oil, Gas, Drilling And Petroleum Distribution Companies)',
-        description: 'Invest in oil trade different energy ETFs to generate profit.',
+        title: 'Economic Calendar',
+        description: 'Keep an eye on key upcoming economic events, announcements, and news. Plus, set up filters in a few clicks, selecting for event importance and affected currencies.',
         color: '#2563eb'
     },
     {
-        title: 'Construction ETF\'s',
-        description: 'Invest in oil trade different construction ETFs to generate profit.',
+        title: 'Stock Market',
+        description: 'See the top five gaining, losing, and most active stocks for the day. It updates based on current market activity – so you\'ll always see the most relevant stocks.',
         color: '#2563eb'
     },
     {
-        title: 'Tech ETF\'s',
-        description: 'Invest in oil trade different tech ETFs to generate profit.',
+        title: 'Market Overview',
+        description: 'Built for when you need to take a macro look at the markets. This widget works particularly well on homepages.',
         color: '#2563eb'
     },
     {
-        title: 'Automatic ETF\'s',
-        description: 'It uses AI to trade different automobile ETF\'s to generate profit.',
+        title: 'Forex Cross Rates',
+        description: 'This one allows you to display real-time quotes of selected currencies in comparison to other major currencies.',
         color: '#2563eb'
     },
-    {
-        title: 'Agriculture ETF\'s',
-        description: 'It uses AI to trade different agricultural ETF\'s to generate profit.',
-        color: '#2563eb'
-    }
+
 ];
 
 export const stockListings = [
@@ -79,12 +75,5 @@ export const stockListings = [
         { symbol: 'BMW', name: 'Bayerische Motoren Werke', price: '93.47', change: '+1.10%', positive: true, color: '#2ecc71' },
     ],
     // Agriculture stocks
-    [
-        { symbol: 'CPOF', name: 'Charoen Pokphand Foods', price: '0.57', change: '+0.88%', positive: true, color: '#f39c12' },
-        { symbol: 'ZWO', name: 'Wide Open Agriculture Ltd.', price: '0.01', change: '+6.25%', positive: true, color: '#2ecc71' },
-        { symbol: 'CLAD', name: 'Celestica Inc.', price: '45.20', change: '+0.00%', positive: true, color: '#9b59b6' },
-        { symbol: 'SMADL', name: 'Shri Mahalaxmi Agricultural', price: '3.42', change: '0.00%', positive: true, color: '#e67e22' },
-        { symbol: 'LIVESTOCK', name: 'Livestock Feeds PLC', price: '6.05', change: '+7.08%', positive: true, color: '#f1c40f' },
-        { symbol: 'SIXN', name: 'SIOUXLAND ENERGY', price: '500.00', change: '-9.09%', positive: false, color: '#e74c3c' },
-    ]
+
 ];

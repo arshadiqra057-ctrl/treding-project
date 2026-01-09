@@ -105,6 +105,31 @@ class StockSeeder extends Seeder
              Stock::updateOrCreate(['symbol' => $stock['symbol']], $stock);
         }
 
+        // Add Forex and Crypto Assets
+        $marketAssets = [
+            // Forex
+            ['symbol' => 'EURUSD', 'name' => 'EUR/USD', 'value' => 1.08, 'change' => 0.05, 'chgPct' => 0.04, 'category' => 'forex', 'color' => '#003399'],
+            ['symbol' => 'GBPUSD', 'name' => 'GBP/USD', 'value' => 1.26, 'change' => -0.10, 'chgPct' => -0.08, 'category' => 'forex', 'color' => '#c8102e'],
+            ['symbol' => 'USDJPY', 'name' => 'USD/JPY', 'value' => 148.50, 'change' => 0.30, 'chgPct' => 0.20, 'category' => 'forex', 'color' => '#bc002d'],
+            ['symbol' => 'USDCHF', 'name' => 'USD/CHF', 'value' => 0.88, 'change' => -0.02, 'chgPct' => -0.02, 'category' => 'forex', 'color' => '#d52b1e'],
+            ['symbol' => 'AUDUSD', 'name' => 'AUD/USD', 'value' => 0.65, 'change' => 0.15, 'chgPct' => 0.23, 'category' => 'forex', 'color' => '#00008b'],
+            
+            // Crypto
+            ['symbol' => 'BTC', 'name' => 'Bitcoin', 'value' => 64500.00, 'change' => 1200.00, 'chgPct' => 1.89, 'category' => 'crypto', 'color' => '#f7931a'],
+            ['symbol' => 'ETH', 'name' => 'Ethereum', 'value' => 3450.00, 'change' => 85.00, 'chgPct' => 2.52, 'category' => 'crypto', 'color' => '#627eea'],
+            ['symbol' => 'SOL', 'name' => 'Solana', 'value' => 148.00, 'change' => 5.20, 'chgPct' => 3.64, 'category' => 'crypto', 'color' => '#00ffa3'],
+            ['symbol' => 'BNB', 'name' => 'Binance Coin', 'value' => 590.00, 'change' => 10.00, 'chgPct' => 1.72, 'category' => 'crypto', 'color' => '#f3ba2f'],
+            ['symbol' => 'XRP', 'name' => 'Ripple', 'value' => 0.62, 'change' => 0.01, 'chgPct' => 1.63, 'category' => 'crypto', 'color' => '#23292f'],
+        ];
+
+        foreach ($marketAssets as $asset) {
+             $asset['open'] = $asset['value'];
+             $asset['high'] = $asset['value'] * 1.05;
+             $asset['low'] = $asset['value'] * 0.95;
+             $asset['prev'] = $asset['value'];
+             Stock::updateOrCreate(['symbol' => $asset['symbol']], $asset);
+        }
+
         // Updating Categories for existing stocks that should be 'tech'
         Stock::whereIn('symbol', ['MSFT', 'NFLX', 'META', 'GOOGL', 'NVDA', 'AMD', 'AAPL', 'AMZN'])->update(['category' => 'tech']);
 

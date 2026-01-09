@@ -1,0 +1,71 @@
+.manage-withdraw-container {
+    padding: 0 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.withdraw-tabs-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.withdraw-tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+}
+
+.withdraw-tab-btn.active {
+    color: #0f172a;
+    border-bottom-color: #0f172a;
+    font-weight: 600;
+}
+
+/* Embedded KYC Styling Fixes */
+.new-withdraw-wrapper .auth-page {
+    min-height: auto !important;
+    padding-top: 0 !important;
+    display: block !important;
+}
+
+.new-withdraw-wrapper .auth-container {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.new-withdraw-wrapper .auth-card {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    /* Adjust if too tight */
+    background: transparent !important;
+}
+
+/* Hide big headers if redundant inside dashboard? 
+   No, user probably wants to see "Identity Verification" title. 
+   Keeping it visible. 
+*/
+
+.history-tab-wrapper .auth-page {
+    min-height: auto !important;
+    padding-top: 0 !important;
+}
+
+.history-tab-wrapper .auth-container {
+    max-width: 100% !important;
+}
+
+.history-tab-wrapper .auth-card {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+}

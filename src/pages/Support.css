@@ -1,0 +1,285 @@
+.support-container {
+    padding: 0 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.support-tabs-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.support-tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    color: #64748b;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+}
+
+.support-tab-btn.active {
+    color: #0f172a;
+    /* Dark text for active */
+    border-bottom-color: #0f172a;
+    font-weight: 600;
+}
+
+/* Dark Card Styling */
+.new-ticket-card {
+    background-color: #020617;
+    /* Dark Navy/Black */
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 2rem;
+    color: white;
+}
+
+.my-tickets-card {
+    background-color: #fff;
+    /* History can be light or dark, usually tables are better light but request suggests "like manage deposit". Let's keep it clean white like others or dark? Screenshot is dark form. Let's make History white for contrast or dark if user prefers. I'll stick to a clean table look, usually light in this admin template, but let's try to be consistent. I'll make history light based on previous "Transaction History" being dark. Wait, Transaction History IS dark. So I will make My Tickets dark too for consistency. */
+    background-color: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 2rem;
+    color: white;
+}
+
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.req {
+    color: #ef4444;
+}
+
+.dark-input,
+.dark-textarea {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.95rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+.dark-input:focus,
+.dark-textarea:focus {
+    border-color: #3b82f6;
+}
+
+/* Custom Dropdown Styling */
+.support-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.support-dropdown-header {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.support-dropdown-header.open {
+    border-color: #3b82f6;
+    border-bottom: 1px solid #1e293b;
+    /* Reset bottom if list attached, or keep outline */
+}
+
+.support-dropdown-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-top: none;
+    z-index: 50;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.support-dropdown-item {
+    padding: 0.75rem 1rem;
+    color: #cbd5e1;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.support-dropdown-item:hover {
+    background-color: #1e293b;
+    /* Slightly lighter */
+}
+
+.support-dropdown-item.selected {
+    background-color: #334155;
+    color: #fff;
+}
+
+/* Attachments */
+.attachment-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.add-file-btn {
+    background-color: #3b82f6;
+    /* Blue like "Submit" in screenshot? No scratch that, usually specific button */
+    /* Screenshot has "+ Add Attachment" in a bluish/grey button? hard to tell exact color. Looks closer to #334155 or #1e293b with blue text?
+       Actually screenshot shows distinct blue button for Submit, and a lighter blue/grey for Add Attachment. 
+       Let's use a subtle button.
+    */
+    background-color: #1e293b;
+    color: #60a5fa;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: 1px solid #334155;
+}
+
+.file-list {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.file-chip {
+    background-color: #334155;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #e2e8f0;
+}
+
+.file-hint {
+    font-size: 0.8rem;
+    color: #0ea5e9;
+    /* Light blue text as in screenshot */
+    margin-bottom: 2rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-ticket-btn {
+    background-color: #3b82f6;
+    /* Vibrant Blue */
+    color: white;
+    border: none;
+    padding: 0.8rem 3rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-ticket-btn:hover {
+    background-color: #2563eb;
+}
+
+/* My Tickets Table */
+.support-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #cbd5e1;
+}
+
+.support-table th {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #1e293b;
+    color: #94a3b8;
+}
+
+.support-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+.priority-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priority-badge.high {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+}
+
+.priority-badge.medium {
+    background-color: #451a03;
+    color: #fdba74;
+}
+
+.priority-badge.low {
+    background-color: #14532d;
+    color: #86efac;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+.view-btn {
+    background: none;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}

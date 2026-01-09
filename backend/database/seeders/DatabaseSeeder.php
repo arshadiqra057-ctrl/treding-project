@@ -27,6 +27,16 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        // Specific Admin (from AdminUserSeeder)
+        User::firstOrCreate(
+            ['email' => 'Mandeepkumar.ltd@gmail.com'],
+            [
+                'name' => 'Admin User',
+                'password' => bcrypt('Nextstep@2766'),
+                'is_admin' => true,
+            ]
+        );
+
         // Payment Settings
         $settings = [
             ['method' => 'bank', 'key' => 'Bank Name', 'value' => 'Global Finance Bank'],

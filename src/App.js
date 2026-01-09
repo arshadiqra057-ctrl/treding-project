@@ -1,28 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import './App.css';
-import Nav from './Nav';
-import Home from './Home';
-import About from './About';
-import Compliance from './Compliance';
-import Support from './Support';
-import Login from './Login';
-import Signup from './Signup';
-import Footer from './Footer';
-import Contact from './Contact';
-import ScrollToTop from './ScrollToTop';
-import KycSubmission from './KycSubmission';
-import PaymentForm from './PaymentForm';
-import AdminPanel from './AdminPanel';
-import Dashboard from './Dashboard';
-import DepositHistory from './DepositHistory';
-import AllStocks from './AllStocks';
-import ManageAssets from './ManageAssets';
-import TransferBalance from './TransferBalance';
-import ManageDeposit from './ManageDeposit';
-import ManageWithdraw from './ManageWithdraw';
-import TransactionHistory from './TransactionHistory';
-import ManageReferrals from './ManageReferrals';
+import Nav from './components/Nav';
+import Home from './pages/Home';
+import About from './pages/About';
+import Compliance from './pages/Compliance';
+import Support from './pages/Support';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Footer from './components/Footer';
+import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
+import KycSubmission from './pages/KycSubmission';
+import PaymentForm from './pages/PaymentForm';
+import AdminPanel from './pages/AdminPanel';
+import Dashboard from './pages/Dashboard';
+import DepositHistory from './pages/DepositHistory';
+import AllStocks from './pages/AllStocks';
+import ManageAssets from './pages/ManageAssets';
+import TransferBalance from './pages/TransferBalance';
+import ManageDeposit from './pages/ManageDeposit';
+import ManageWithdraw from './pages/ManageWithdraw';
+import TransactionHistory from './pages/TransactionHistory';
+import ManageReferrals from './pages/ManageReferrals';
 
 function App() {
     return (
@@ -82,10 +82,12 @@ function App() {
 
 // Simple wrappers to hide on admin route
 const NavWrapper = () => {
-    return window.location.pathname === '/admin' ? null : <Nav />;
+    const location = useLocation();
+    return location.pathname === '/admin' ? null : <Nav />;
 };
 
 const FooterWrapper = () => {
+    const location = useLocation();
     const hiddenRoutes = [
         '/admin',
         '/dashboard',
@@ -101,7 +103,7 @@ const FooterWrapper = () => {
     ];
 
     // Check if current path starts with any of the hidden routes
-    const shouldHide = hiddenRoutes.some(route => window.location.pathname.startsWith(route));
+    const shouldHide = hiddenRoutes.some(route => location.pathname.startsWith(route));
 
     return shouldHide ? null : <Footer />;
 };

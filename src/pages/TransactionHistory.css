@@ -1,0 +1,251 @@
+.transaction-history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.page-title {
+    color: #4faae1;
+    /* Light blue title */
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+/* Card Styles */
+.filter-card,
+.results-card {
+    background-color: #020617;
+    /* Very dark background */
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Filter Row */
+.filter-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-end;
+    /* Align button with inputs */
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+    /* For dropdown absolute positioning */
+}
+
+.filter-group label {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.filter-input,
+.filter-select {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    border-color: #3b82f6;
+}
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #0f172a;
+    border-radius: 4px;
+}
+
+.dropdown-header {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-header.open {
+    border-color: #3b82f6;
+    border-radius: 4px 4px 0 0;
+}
+
+.arrow-icon {
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f172a;
+    /* Dropdown Body Background */
+    border: 1px solid #1e293b;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-search {
+    padding: 10px;
+    border-bottom: 1px solid #1e293b;
+}
+
+.dropdown-search input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #334155;
+    background-color: #000;
+    /* Search Input Black BG */
+    color: #fff;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-search input:focus {
+    border-color: #3b82f6;
+}
+
+.dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #cbd5e1;
+}
+
+.dropdown-item:hover {
+    background-color: #1e293b;
+}
+
+.dropdown-item.selected {
+    background-color: #334155;
+    color: #fff;
+}
+
+.dropdown-item.no-results {
+    color: #64748b;
+    text-align: center;
+    cursor: default;
+}
+
+.btn-group {
+    flex: 0 0 auto;
+    /* Button doesn't grow excessively */
+}
+
+.filter-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    height: 42px;
+    /* Match input height roughly */
+}
+
+.filter-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Results Content */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    color: #64748b;
+}
+
+.clipboard-icon {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.loading-state {
+    text-align: center;
+    color: #94a3b8;
+}
+
+/* Data Table */
+.trx-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #cbd5e1;
+}
+
+.trx-table th {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 2px solid #1e293b;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.trx-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.completed,
+.status-badge.success {
+    background-color: #052e16;
+    color: #4ade80;
+}
+
+.status-badge.pending {
+    background-color: #422006;
+    color: #fbbf24;
+}
+
+.text-green {
+    color: #4ade80;
+}
+
+.text-red {
+    color: #ef4444;
+}

@@ -1,0 +1,230 @@
+/* ===== Announcement Bar ===== */
+.announcement-bar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.announcement-icon {
+    font-size: 16px;
+}
+
+.announcement-text {
+    letter-spacing: 0.3px;
+}
+
+.announcement-text strong {
+    color: #ffffff;
+}
+
+/* ===== Main Navbar ===== */
+.main-navbar {
+    background: rgba(15, 40, 71, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* Logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-icon svg {
+    width: 45px;
+    height: 45px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4A9FD4;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.login-btn {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    color: #4A9FD4;
+}
+
+.signup-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #4A9FD4;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: #4A9FD4;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(74, 159, 212, 0.4);
+}
+
+.signup-btn .arrow {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.signup-btn:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1200px) {
+    .nav-menu {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .main-navbar {
+        padding: 0 20px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .nav-menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 12px;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .auth-buttons {
+        gap: 12px;
+    }
+
+    .signup-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .logo-icon svg {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    .announcement-text {
+        font-size: 11px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .auth-buttons {
+        gap: 8px;
+    }
+
+    .login-btn {
+        font-size: 13px;
+    }
+
+    .signup-btn {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
